@@ -58,6 +58,8 @@ const Login = () => {
             </p>
           )}
 
+          {/* todo forget password functionality */}
+
           <div>
             <a className="link link-hover">Forgot password?</a>
           </div>
