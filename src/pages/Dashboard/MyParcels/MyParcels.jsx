@@ -6,7 +6,6 @@ import { FiEdit } from "react-icons/fi";
 import { FaMagnifyingGlass, FaTrashCan } from "react-icons/fa6";
 import Swal from "sweetalert2";
 import { Link } from "react-router";
-
 const MyParcels = () => {
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
@@ -56,6 +55,7 @@ const MyParcels = () => {
       parcelId: parcel._id,
       senderEmail: parcel.senderEmail,
       parcelName: parcel.parcelName,
+      trackingId: parcel.trackingId,
     };
     const res = await axiosSecure.post(
       "/payment-checkout-session",
@@ -78,6 +78,7 @@ const MyParcels = () => {
               <th>Name</th>
               <th>Cost</th>
               <th>Payment</th>
+              <th>Tracking Id</th>
               <th>Delivery Status</th>
               <th>Actions</th>
             </tr>
@@ -99,6 +100,12 @@ const MyParcels = () => {
                       Pay
                     </button>
                   )}
+                </td>
+                <td>
+                  <Link to={`/parcel-track/${parcel.trackingId}`}>
+                    {" "}
+                    {parcel.trackingId}
+                  </Link>
                 </td>
                 <td>{parcel.deliveryStatus}</td>
                 <td>
