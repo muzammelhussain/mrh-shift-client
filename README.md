@@ -1,16 +1,69 @@
-# React + Vite
+# 📦 Parcel Tracking System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Parcel Tracking System is a modern, full-stack web application that allows users to track parcels in real-time. Customers can create shipments, monitor delivery status, and receive notifications, while admins can manage shipments, update statuses, and ensure smooth operations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Site
+- **Client:**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Key Features
 
-## Expanding the ESLint configuration
+### ✔ Authentication & Authorization
+- Email & password login with **Firebase** or custom authentication  
+- Role-based access (Customer, Admin, Manager)  
+- Secure JWT-based authentication for APIs  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✔ Shipment Management
+- Customers can create new shipments with sender & receiver details  
+- Admins and Managers can manage all parcels and update statuses  
+- Track parcels using unique tracking IDs  
+
+### ✔ Real-time Tracking
+- Track shipment status from dispatch to delivery  
+- Automatic updates for status changes  
+
+### ✔ Notifications
+- Receive notifications when parcel status changes  
+- Email or in-app notifications for important updates  
+
+### ✔ Sorting, Filtering & Search
+- Search parcels by tracking ID  
+- Filter by status: Pending, In-Transit, Delivered, Cancelled  
+- Sort by date, priority, or destination  
+
+### ✔ Responsive UI
+- Optimized for mobile, tablet, and desktop screens  
+- Clean and modern interface using **Tailwind CSS** & **DaisyUI**
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+- React.js, Vite  
+- Tailwind CSS & DaisyUI  
+- React Router, SweetAlert2  
+
+### State & Data
+- Axios, TanStack React Query  
+
+### Backend / Database
+- Node.js, Express.js  
+- MongoDB  
+
+### Authentication
+- Firebase Authentication or custom JWT  
+
+### Deployment
+- Vercel (Frontend)  
+- Heroku / Render (Backend, if separate)
+
+
+## 💻 Run Locally
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/your-username/parcel-tracking-system.git
